@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Family Website</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>My family book</h1>
+    <img id= "image_familymemeber" src = "family.png">
+    <h2 id="familynames">family book</h2>
+    <button onclick="update();">Next</button>
+</body>
+<script>
+    var images = 
+    [
+        "family.png",
+        "Shaan Sarkar.jpg",
+        "Peali Sarkar.jpg",
+        "Shom Sarkar.jpg",
+        "Sudhir Kumar Sarkar.jpg",
+        "SubrataSarkar.jpeg",
+        "SusmitaSarkar.jpeg",
+    ];
+    var names =
+    [
+        "family book",
+        "Shaan Sarkar",
+        "Peali Sarkar",
+        "Shom Sarkar",
+        "Sudhir Kumar Sarkar",
+        "Subrata Sarkar",
+        "Susmita Sarkar",
+    ];
+    var i = 0;
+    function update()
+    {
+        i++;
+        var number_of_family_members_in_array = 6;
+        if(i > number_of_family_members_in_array)
+        {
+            i = 0;
+        }
+        var updatedimage = images[i];
+        var updatedname = names[i];
+        document.getElementById("image_familymemeber").src = updatedimage;
+        document.getElementById("familynames").innerHTML = updatedname;
+    };
+</script>
+</html>
